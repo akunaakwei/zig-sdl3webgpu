@@ -1,0 +1,18 @@
+.{
+    .name = .zig_sdl3webgpu,
+    .version = "0.0.1",
+    .minimum_zig_version = "0.15.1",
+    .fingerprint = 0x412553ee75529b63,
+    .dependencies = .{
+        .sdl3webgpu = .{
+            .url = "https://github.com/eliemichel/sdl3webgpu/archive/4fa9d70935e41c075f664b231ee10a64262a8ac7.tar.gz",
+            .hash = "N-V-__8AAFtZAADm6a1_6N_xImNJ7m6xuSE0bV1U7vdf2dqn",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "LICENSE",
+        "src",
+    },
+}
