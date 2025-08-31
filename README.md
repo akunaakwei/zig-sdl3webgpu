@@ -48,3 +48,6 @@ pub fn build(b: *std.Build) void {
     exe.root_module.addImport("sdl3webgpu", sdl3webgpu_mod);
 }
 ```
+
+# Example
+Check out [sdl3 dawn example](https://github.com/akunaakwei/zig-sdl3-dawn-example) for a fully functional example.
