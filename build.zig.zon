@@ -1,8 +1,8 @@
 .{
     .name = .sdl3webgpu,
     .version = "0.0.1",
-    .minimum_zig_version = "0.15.1",
     .fingerprint = 0x75a6575236e56965,
+    .minimum_zig_version = "0.16.0",
     .dependencies = .{
         .sdl3webgpu = .{
             .url = "https://github.com/eliemichel/sdl3webgpu/archive/4fa9d70935e41c075f664b231ee10a64262a8ac7.tar.gz",

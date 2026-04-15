@@ -1,5 +1,5 @@
 # sdl3webgpu
-This is sdl3webgpu for the zig build system.
+This is [sdl3webgpu](https://github.com/eliemichel/sdl3webgpu) for the zig build system.
 
 # Usage
 You need to bring your own headers and library for SDL 3 and a WebGPU implementation (dawn for example).  
