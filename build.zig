@@ -46,11 +46,4 @@ pub fn build(b: *std.Build) void {
     });
     sdl3webgpu.installHeader(sdl3webgpu_dep.path("sdl3webgpu.h"), "sdl3webgpu.h");
     b.installArtifact(sdl3webgpu);
-
-    const mod = b.addModule("sdl3webgpu", .{
-        .target = target,
-        .optimize = optimize,
-        .root_source_file = b.path("src/root.zig"),
-    });
-    mod.linkLibrary(sdl3webgpu);
 }
