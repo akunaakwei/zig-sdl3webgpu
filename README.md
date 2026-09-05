@@ -23,23 +23,12 @@ pub fn build(b: *std.Build) void {
     const sdl3webgpu_dep = b.dependency("sdl3webgpu", .{
         .target = target,
         .optimize = optimize,
-        .sdl3_headers = sdl3_lib.getEmittedIncludeTree(),
-        .sdl3_library = sdl3_lib.getEmittedBin(),
-        .webgpu_headers = webgpu_lib.getEmittedIncludeTree(),
-        .webgpu_library = webgpu_lib.getEmittedBin(),
     });
+    const sdl3webgpu_lib = sdl3webgpu_dep.artifact("sdl3webgpu");
+    sdl3webgpu_lib.root_module.linkLibrary(sdl3_lib);
+    sdl3webgpu_lib.root_module.linkLibrary(webgpu_lib);
 
-    const exe = b.addExecutable(.{
-        .name = "example",
-        .root_module = b.createModule(.{
-            .root_source_file = b.path("src/main.zig"),
-            .target = target,
-            .optimize = optimize,
-        }),
-    });
-    exe.root_module.addImport("sdl3", sdl3_mod);
-    exe.root_module.addImport("webgpu", webgpu_mod);
-    exe.root_module.addImport("sdl3webgpu", sdl3webgpu_mod);
+    // ...
 }
 ```
 
